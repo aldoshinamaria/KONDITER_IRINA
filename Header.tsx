@@ -1,0 +1,78 @@
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
+
+const links = [
+  { href: "#about", label: "Обо мне" },
+  { href: "#gallery", label: "Галерея" },
+  { href: "#prices", label: "Меню" },
+  { href: "#contacts", label: "Контакты" },
+];
+
+const Header = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-chocolate/80 backdrop-blur-md">
+      <div className="container mx-auto px-6 flex items-center justify-between h-16">
+        <a href="#" className="text-cream font-heading text-xl font-bold">
+          Ирина <span className="text-gradient-gold italic">Землякова</span>
+        </a>
+
+        <nav className="hidden md:flex items-center gap-8">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-cream/80 hover:text-cream font-sans text-sm tracking-wide transition-colors"
+            >
+              {l.label}
+            </a>
+          ))}
+          <a
+            href="#order"
+            className="px-5 py-2 bg-primary text-primary-foreground rounded-full font-sans text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
+          >
+            Заказать
+          </a>
+          <ThemeToggle />
+        </nav>
+
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-cream"
+            aria-label="Меню"
+          >
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+      </div>
+
+      {open && (
+        <nav className="md:hidden bg-chocolate/95 backdrop-blur-md px-6 pb-6 flex flex-col gap-4">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              onClick={() => setOpen(false)}
+              className="text-cream/80 hover:text-cream font-sans text-sm tracking-wide transition-colors"
+            >
+              {l.label}
+            </a>
+          ))}
+          <a
+            href="#order"
+            onClick={() => setOpen(false)}
+            className="mt-2 text-center px-5 py-3 bg-primary text-primary-foreground rounded-full font-sans text-sm font-medium tracking-wide hover:opacity-90 transition-opacity"
+          >
+            Заказать
+          </a>
+        </nav>
+      )}
+    </header>
+  );
+};
+
+export default Header;

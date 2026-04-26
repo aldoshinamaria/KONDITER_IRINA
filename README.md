@@ -1,2 +1,3 @@
-# KONDITER_IRINA
-сайт для Земляковой Ирины кондитера
+# Welcome to your Lovable project
+
+TODO: Document your project here
