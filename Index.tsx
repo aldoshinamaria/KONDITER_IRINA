@@ -1,12 +1,12 @@
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import GallerySection from "@/components/GallerySection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import PriceSection from "@/components/PriceSection";
-import OrderSection from "@/components/OrderSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
+import Header from "@/Header";
+import HeroSection from "@/HeroSection";
+import AboutSection from "@/AboutSection";
+import GallerySection from "@/GallerySection";
+import TestimonialsSection from "@/TestimonialsSection";
+import PriceSection from "@/PriceSection";
+import OrderSection from "@/OrderSection";
+import ContactSection from "@/ContactSection";
+import Footer from "@/Footer";
 
 const Index = () => {
   return (

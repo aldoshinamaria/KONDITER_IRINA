@@ -1,29 +1,29 @@
 import { useState } from "react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useScrollAnimation } from "@/useScrollAnimation";
 import { format } from "date-fns";
 import { ru } from "date-fns/locale";
 import { CalendarIcon, Send } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { cn } from "@/utils";
+import { Button } from "@/button";
+import { Calendar } from "@/calendar";
+import { Input } from "@/input";
+import { Textarea } from "@/textarea";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover";
+} from "@/popover";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
+} from "@/select";
+import { RadioGroup, RadioGroupItem } from "@/radio-group";
+import { Label } from "@/label";
 import { toast } from "sonner";
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/client";
 
 const fillings = [
   { value: "chocolate", label: "Шоколадная", emoji: "🍫" },

@@ -1,5 +1,5 @@
 import { Phone, Send } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useScrollAnimation } from "@/useScrollAnimation";
 
 const ContactSection = () => {
   const ref = useScrollAnimation();

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Cake } from "lucide-react";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { supabase } from "@/integrations/supabase/client";
+import { useScrollAnimation } from "@/useScrollAnimation";
+import { supabase } from "@/client";
 
 interface Product {
   id: string;

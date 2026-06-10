@@ -1,4 +1,4 @@
-import heroPastries from "@/assets/hero-pastries.jpg";
+import heroPastries from "@/hero-pastries.jpg";
 import { Heart } from "lucide-react";
 
 const HeroSection = () => {

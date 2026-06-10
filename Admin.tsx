@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
+import { useAuth } from "@/useAuth";
 import { useNavigate } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { supabase } from "@/client";
+import { Button } from "@/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/tabs";
 import { Loader2, LogOut, Package, ShoppingBag } from "lucide-react";
-import AdminProducts from "@/components/admin/AdminProducts";
-import AdminOrders from "@/components/admin/AdminOrders";
+import AdminProducts from "@/AdminProducts";
+import AdminOrders from "@/AdminOrders";
 import { toast } from "sonner";
 
 const Admin = () => {
